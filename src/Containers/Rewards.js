@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 
-class Inbox extends Component {
+class Rewards extends Component {
 
   render() {
     return(
       <div>
-        Inbox container
+        Rewards container
       </div>
     )
   }
 
 }
 
-export default Inbox;
+export default Rewards;

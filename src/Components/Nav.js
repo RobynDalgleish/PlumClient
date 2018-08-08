@@ -2,15 +2,31 @@ import React from 'react';
 import {
   Link
 } from 'react-router-dom';
+import '../styles/nav.css'
 
 const Nav = () => {
 
   return(
     <div>
-      <ul>
-        <li>
+      <ul className='navContainer'>
+        {/* <li>
           <Link to='/'>
-            Home
+            Mindbody
+          </Link>
+        </li> */}
+        <li>
+          <Link to='/challenges'>
+            Challenges
+          </Link>
+        </li>
+        <li>
+          <Link to='/rewards'>
+            Rewards
+          </Link>
+        </li>
+        <li>
+          <Link to='/notifications'>
+            Notifications
           </Link>
         </li>
         <li>
@@ -21,11 +37,6 @@ const Nav = () => {
         <li>
           <Link to='/inbox'>
             Inbox
-          </Link>
-        </li>
-        <li>
-          <Link to='/inbox/3'>
-            Message
           </Link>
         </li>
       </ul>

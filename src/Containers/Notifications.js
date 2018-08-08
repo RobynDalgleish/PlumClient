@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 
-class Inbox extends Component {
+class Notifications extends Component {
 
   render() {
     return(
       <div>
-        Inbox container
+        Notifications container
       </div>
     )
   }
 
 }
 
-export default Inbox;
+export default Notifications;
