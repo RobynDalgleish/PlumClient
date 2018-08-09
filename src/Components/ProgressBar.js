@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/progressBar.css'
 
 const ProgressBar = ({ value = 0 }) => {
   let width = value;

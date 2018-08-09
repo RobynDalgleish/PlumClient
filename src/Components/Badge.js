@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/badge.css'
 
 const Badge = ({ data = [], type = '' }) => {
   
