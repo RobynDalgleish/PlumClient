@@ -18,10 +18,14 @@ class Profile extends Component {
     // match is an object on the React Router object
     axios.get(`http://server.internproject.hugetointernal.hugeops.com/api/profiles${this.props.match.params.id}`)
       .then(({ data }) => {
-      this.setState({
-        profile: data
+        this.setState({
+          profile: data
+        });
       })
-    });
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      });
   };
 
   // functions to check if requested data exists in a particular profile before returning the component
