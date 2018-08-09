@@ -29,7 +29,7 @@ const Nav = () => {
           </Link>
         </li>
         <li>
-          <Link to='/profile/3'>
+          <Link to='/profiles/3'>
             Profile
           </Link>
         </li>

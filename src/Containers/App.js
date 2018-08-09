@@ -23,7 +23,7 @@ class App extends Component {
           <Route exact path="/challenges" component={Challenges}/>
           <Route exact path="/rewards" component={Rewards}/>
           <Route exact path="/notifications" component={Notifications}/>
-          <Route path="/profile/:id" component={Profile}/>
+          <Route path="/profiles/:id" component={Profile}/>
           <Route exact path="/inbox" component={Inbox}/>
           {/* <Route exact path="/inbox/:id" component={Message}/> */}
         </div>

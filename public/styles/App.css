@@ -1,0 +1,17 @@
+.progressBar {
+  border: 1px solid black; }
+
+.progressBarLevel {
+  background-color: purple;
+  height: 50px; }
+
+.badge {
+  width: 50px;
+  height: 50px;
+  flex-direction: row; }
+
+.badgeContainer {
+  display: flex; }
+
+.navContainer {
+  display: flex; }
