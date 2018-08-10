@@ -1,9 +1,10 @@
 import React from 'react';
+import ProgressBar from './ProgressBar';
 // import moment from 'moment';
 
-const Challenge = ({ data = [], name = '' }) => {
+const Challenge = ({ challenges = [], name = '' }) => {
 
-  if (!data.length && !name.length) {
+  if (!challenges.length && !name.length) {
     return null;
   }
   
@@ -11,12 +12,11 @@ const Challenge = ({ data = [], name = '' }) => {
     <div>
       <h3>{name}</h3>
       {
-        data.map((item, i) => {
+        challenges.map((item, i) => {
           return ( 
             <div key={i}>
               <p>{item.achievementName}</p>
-              {/* if ____ then progress bar, else date etc */}
-              <p>progress bar</p>
+              <ProgressBar min={0} max={item.pointsValue} current={item.userPoints} />
               {/* <p>{moment(item.achievmentDate).format('MMMM Do YYYY')}</p> */}
               {/* <p>{item.achievementId}</p> */}
             </div> 

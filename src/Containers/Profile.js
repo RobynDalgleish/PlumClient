@@ -16,7 +16,8 @@ class Profile extends Component {
 
   componentWillMount() {
     // match is an object on the React Router object
-    axios.get(`http://server.internproject.hugetointernal.hugeops.com/api/profiles/${this.props.match.params.id}`)
+    // axios.get(`http://server.internproject.hugetointernal.hugeops.com/api/profiles/${this.props.match.params.id}`)
+    axios.get(`http://localhost:8080/api/profiles/${this.props.match.params.id}`)
       .then(({ data }) => {
         this.setState({
           profile: data
@@ -47,7 +48,7 @@ class Profile extends Component {
     if (!challenges || !challenges.length) {
       return null;
     };
-    return <Challenge data={challenges} name={type} />
+    return <Challenge challenges={challenges} name={type} />
   };
 
   renderBadges = (badges, type) => {
@@ -66,13 +67,23 @@ class Profile extends Component {
     if (!this.state.profile) {
       return <div>Loading...</div>
     }
+  
+  let currentLevelIndex = 0;
+  const currentLevel = this.state.profile.levelsList.find((levelItem, i) => {
+    currentLevelIndex = i
+    return levelItem.level === this.state.profile.level;
+  });
 
-    const statusValue = this.getStatus();
+  const statusProgress = {
+    min: currentLevel.level === 1 ? 0 : this.state.profile.levelsList[currentLevelIndex - 1].xpLimit,
+    current: this.state.profile.points,
+    max: currentLevel.xpLimit,
+  };
 
     return(
       <div>
         <p>Level: {this.state.profile.level}</p>
-        <ProgressBar value={statusValue} />
+        <ProgressBar { ...statusProgress } />
         <Photo name={ this.state.profile.userName } photo={ this.state.profile.photo }/>
         <h2>{ this.state.profile.userName }</h2>
         <HomeStudio data={ this.state.profile.homeStudio} name={ 'Home Studio' } />

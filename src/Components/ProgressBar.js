@@ -1,10 +1,7 @@
 import React from 'react';
 
-const ProgressBar = ({ value = 0 }) => {
-  let width = value;
-  if (value > 99) {
-    width = 99;
-  }
+const ProgressBar = ({ min = 0, max = 100, current = 50 }) => {
+  let width = (current - min) / (max - min) * 100
 
   return(
     <div className='progressBar'>
