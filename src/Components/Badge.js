@@ -14,9 +14,8 @@ const Badge = ({ data = [], type = '' }) => {
           data.map((item, i) => {
             return ( 
               <div key={i}>
-                <img className='badge' alt='' src={item.photo} />
-                <p>{item.userName}</p>
-                {/* <p>{item.id}</p> */}
+                <img className='badge' alt='' src={item.badgePhoto} />
+                <p>{item.badgeName}</p>
               </div> 
             );
           })

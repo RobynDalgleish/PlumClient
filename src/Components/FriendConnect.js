@@ -1,11 +1,11 @@
-import React from 'react';
+// import React from 'react';
 
-const FriendConnect = () => {
-  return(
-    <div>
-      FriendConnect component
-    </div>
-  );
-};
+// const FriendConnect = () => {
+//   return(
+//     <div>
+//       FriendConnect component
+//     </div>
+//   );
+// };
 
-export default FriendConnect;
+// export default FriendConnect; 

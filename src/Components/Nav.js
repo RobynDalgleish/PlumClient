@@ -1,18 +1,11 @@
 import React from 'react';
-import {
-  Link
-} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
 
   return(
     <div>
       <ul className='navContainer'>
-        {/* <li>
-          <Link to='/'>
-            Mindbody
-          </Link>
-        </li> */}
         <li>
           <Link to='/challenges'>
             Challenges

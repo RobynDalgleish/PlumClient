@@ -1,6 +1,6 @@
 import React from 'react';
 import ProgressBar from './ProgressBar';
-// import moment from 'moment';
+import { Link } from 'react-router-dom';
 
 const Challenge = ({ challenges = [], name = '' }) => {
 
@@ -15,10 +15,23 @@ const Challenge = ({ challenges = [], name = '' }) => {
         challenges.map((item, i) => {
           return ( 
             <div key={i}>
-              <p>{item.achievementName}</p>
-              <ProgressBar min={0} max={item.pointsValue} current={item.userPoints} />
-              {/* <p>{moment(item.achievmentDate).format('MMMM Do YYYY')}</p> */}
-              {/* <p>{item.achievementId}</p> */}
+              { 
+                item.userPoints === item.pointsValue ?
+                <div>
+                  <h2>Congrats!</h2>
+                  <p>You completed {item.name}! Redeem your challenge for a reward!</p>
+                  <p>{ item.userPoints }pts &</p>
+                  <p>{ item.rewardName }</p>
+                  <Link to='/rewards'>Redeem</Link>
+                </div>
+                :
+                <div>
+                  <p>{ item.achievementName }</p>
+                  <p>{ Math.floor(item.userPoints / item.pointsValue * 100) }%</p>
+                  <p>{ item.pointsValue }pts</p>
+                  <ProgressBar min={0} max={ item.pointsValue } current={ item.userPoints } />
+                </div>
+              }
             </div> 
           );
         })

@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Photo from '../Components/Photo';
 import HomeStudio from '../Components/HomeStudio';
-import Friend from '../Components/Friend';
+// import Friend from '../Components/Friend';
 import FitnessClass from '../Components/FitnessClass';
 import Challenge from '../Components/Challenge';
 import ProgressBar from '../Components/ProgressBar';
@@ -29,77 +28,96 @@ class Profile extends Component {
       });
   };
 
-  // functions to check if requested data exists in a particular profile before returning the component
-  renderFriends = (friends, type) => {
-    if (!friends || !friends.length) {
-      return null;
-    }
-    return <Friend data={friends} name={type}/>
-  }
-
-  renderClasses = (classes, type) => {
-    if (!classes || !classes.length) {
-      return null;
-    };
-    return <FitnessClass data={classes} name={type} />
+  getStatus = () => {
+    return (this.state.profile.points / 1000) * 100;
   };
 
-  renderChallenges = (challenges, type) => {
-    if (!challenges || !challenges.length) {
-      return null;
-    };
-    return <Challenge challenges={challenges} name={type} />
+  getPointsUntilNextLevel = (levelsList, currentPoints) => {
+    const numberOfPoints = levelsList.find(item => item.xpLimit > currentPoints).xpLimit;
+    return (numberOfPoints - currentPoints)
   };
 
+  getNextLevel = (levelsList, currentLevel) => {
+    const currentLevelIndex = levelsList.findIndex(item => item.level === currentLevel);
+    const nextLevel = levelsList[currentLevelIndex + 1]
+    return nextLevel.level
+  };
+  
+  // functions to check if requested data exists in a particular profile before returning the component:
   renderBadges = (badges, type) => {
     if (!badges || !badges.length) {
       return null;
     };
     return <Badge data={badges} name={type} />
   };
-
-  getStatus = () => {
-    return (this.state.profile.points / 1000) * 100;
-  }
-
+  
+  renderChallenges = (challenges, type) => {
+    if (!challenges || !challenges.length) {
+      return null;
+    };
+    return <Challenge challenges={challenges} name={type} />
+  };
+  
+  renderClasses = (classes, type) => {
+    if (!classes || !classes.length) {
+      return null;
+    };
+    return <FitnessClass data={classes} name={type} />
+  };
+  
+  // renderFriends = (friends, type) => {
+    //   if (!friends || !friends.length) {
+      //     return null;
+      //   }
+      //   return <Friend data={friends} name={type}/>
+      // }
+      
   render() {
-
     if (!this.state.profile) {
       return <div>Loading...</div>
     }
   
-  let currentLevelIndex = 0;
-  const currentLevel = this.state.profile.levelsList.find((levelItem, i) => {
-    currentLevelIndex = i
-    return levelItem.level === this.state.profile.level;
-  });
+    let currentLevelIndex = 0;
+    const currentLevel = this.state.profile.levelsList.find((levelItem, i) => {
+      currentLevelIndex = i
+      return levelItem.level === this.state.profile.level;
+    });
 
-  const statusProgress = {
-    min: currentLevel.level === 1 ? 0 : this.state.profile.levelsList[currentLevelIndex - 1].xpLimit,
-    current: this.state.profile.points,
-    max: currentLevel.xpLimit,
-  };
+    const statusProgress = {
+      min: currentLevel.level === 'Bronze' ? 0 : this.state.profile.levelsList[currentLevelIndex - 1].xpLimit,
+      current: this.state.profile.points,
+      max: currentLevel.xpLimit,
+    };
 
     return(
       <div>
-        <p>Level: {this.state.profile.level}</p>
-        <ProgressBar { ...statusProgress } />
-        <Photo name={ this.state.profile.userName } photo={ this.state.profile.photo }/>
-        <h2>{ this.state.profile.userName }</h2>
+        {/* <Photo name={ this.state.profile.userName } photo={ this.state.profile.photo }/> */}
+        <h2>Hey, { this.state.profile.firstName }</h2>
         <HomeStudio data={ this.state.profile.homeStudio} name={ 'Home Studio' } />
+        <p>{this.state.profile.points} PTS</p>
+        {
+          (this.state.profile.level === "Platinum") ? <p>{ this.state.profile.level }</p>
+          :
+          <div>
+            <ProgressBar { ...statusProgress } />
+            <p>{ this.state.profile.level }</p>
+            <p>
+              { this.getPointsUntilNextLevel(this.state.profile.levelsList, this.state.profile.points) } PTS until ⟶ { this.getNextLevel(this.state.profile.levelsList, this.state.profile.level) }
+            </p>
+          </div>
+        }
         <section>
-          { this.renderBadges(this.state.profile.badges, 'Won Challenges')}
+          { this.renderBadges(this.state.profile.badges, 'Badges')}
         </section>
         <section>
           { this.renderChallenges(this.state.profile.currentChallenges, 'Current Challenges') }
         </section>
         <section>
-          {/* { this.renderClasses(this.state.profile.pastClasses, 'Past Classes') } */}
           { this.renderClasses(this.state.profile.upcomingClasses, 'Upcoming Classes') }
         </section>
-        <section>
+        {/* <section>
           { this.renderFriends(this.state.profile.friends, 'Friends') }
-        </section>
+        </section> */}
       </div>
     );
   }
