@@ -1,0 +1,31 @@
+.totalPoints {
+  font-family: 'basier_squareregular', sans-serif;
+  font-size: 4.4rem;
+  padding: 12px 0 10px 0;
+    &:after {
+      content: 'PTS';
+      font-size: 1.8rem;
+      position: relative;
+      top: -18px;
+      left: 10px;
+    }
+}
+
+.level {
+  display: flex;
+  color: $bodyCopyCards;
+  font-size: 1.6rem;
+  align-items: center;
+  border-bottom: 1px solid $keyLineGrey;
+  padding: 14px 10px 17px 0;
+
+   .currentLevel, .nextLevel {
+     font-family: 'basier_squaremedium', sans-serif;
+     padding-right: 10px;
+   }
+   .pointsUntil {
+     font-family: 'basier_squareregular', sans-serif;
+     border-left: 1px solid $keyLineGrey;
+     padding: 0 10px 0 10px;
+   }
+}

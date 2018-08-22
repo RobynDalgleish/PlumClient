@@ -1,8 +1,24 @@
-.progressBar {
-  border: 1px solid black;
+.mainInfo .progressBar {
+  background-color: $radPinkLight;
+  height: 7px;
+  border-radius: 3.5px;
+  .progressBarLevel {
+    background-color: $radPink;
+    height: 100%;
+    border-top-left-radius: 3.5px;
+    border-bottom-left-radius: 3.5px;
+  }
 }
 
-.progressBarLevel {
-  background-color: purple;
-  height: 50px;
+.progressBar {
+  background-color: $mainPurpleLight;
+  height: 7px;
+  border-radius: 3.5px;
+  .progressBarLevel {
+    background-color: $mainPurple;
+    height: 100%;
+    border-top-left-radius: 3.5px;
+    border-bottom-left-radius: 3.5px;
+  }
 }
+

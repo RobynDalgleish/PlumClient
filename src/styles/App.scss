@@ -1,3 +1,29 @@
-@import "progressBar";
-@import "badge";
+@import "normalize";
+@import "colours";
+@import "fonts";
+@import "cards";
 @import "nav";
+@import "profile";
+@import "badge";
+@import "progressBar";
+@import "homeStudio";
+@import "status";
+
+h2 {
+  font-size: 2.4rem;
+  font-family: 'basier_squaremedium', sans-serif;
+  font-weight: 1;
+}
+
+h3 {
+  font-size: 1.8rem;
+  font-family: 'basier_squaremedium', sans-serif;
+  font-weight: 1;
+}
+
+html {
+  background-color: $backgroundGrey;
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

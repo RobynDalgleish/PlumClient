@@ -1,0 +1,19 @@
+
+.profile {
+  background-color: $torqueT;
+  height: 73vh;
+}
+
+.profileWrapper {
+  padding: 15px;
+    .userName {
+      font-family: 'basier_squaresemibold', sans-serif;
+      padding-top: 10px;
+      font-size: 3.2rem;
+      color: $white;
+    }
+    .chevron {
+      height: 30px;
+      width: 30px;
+    }
+}

@@ -30,19 +30,21 @@ const FitnessClass = ({ data = [], name = '' }) => {
 
     return(
       <div>
-        <h3>{name}</h3>
-        {
-          data.map((item, i) => {
-            return ( 
-              <div key={i}>
-                <p>{item.nameOfClass}</p>
-                <p>{item.instructor}</p>
-                <p>{ dateInContext(item.date) }</p>
-                <p>{ moment(item.date).format("MMMM DD @ hh:mma") }</p>
-              </div> 
-            );
-          })
-        }
+        <h2>{name}</h2>
+        <div className='card'>
+          {
+            data.map((item, i) => {
+              return ( 
+                <div key={i}>
+                  <p>{item.nameOfClass}</p>
+                  <p>{item.instructor}</p>
+                  <p>{ dateInContext(item.date) }</p>
+                  <p>{ moment(item.date).format("MMMM DD @ hh:mma") }</p>
+                </div> 
+              );
+            })
+          }
+        </div>
       </div>
     );
 

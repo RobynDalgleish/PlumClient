@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 
-class Notifications extends Component {
+class Activity extends Component {
 
   render() {
     return(
       <div>
-        Notifications container
+        Activity container
       </div>
     )
   }
 
 }
 
-export default Notifications;
+export default Activity;

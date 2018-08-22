@@ -1,26 +1,28 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Badge = ({ data = [], type = '' }) => {
+const Badge = ({ data = [], name = '' }) => {
   
-  if (!data.length && !type.length) {
+  if (!data.length && !name.length) {
     return null;
   }
 
   return(
-    <div>
-      <h3>{type}</h3>
-      <div className='badgeContainer'>
+    <div className='badges cardPadding'>
+      <h3>{ name }</h3>
+      <div>
         {
           data.map((item, i) => {
             return ( 
-              <div key={i}>
-                <img className='badge' alt='' src={item.badgePhoto} />
+              <div className='badge' key={i}>
+                <img alt={item.badgeDescription} src={item.badgePhoto} />
                 <p>{item.badgeName}</p>
               </div> 
             );
           })
         }
       </div>
+      <Link className='viewAllBadges' to='/rewards'>See All</Link>
     </div>
   );
 };

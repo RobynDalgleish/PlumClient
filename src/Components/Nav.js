@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Photo from './Photo';
 
-const Nav = () => {
+const Nav = (props) => {
 
   return(
-    <div>
-      <ul className='navContainer'>
+    <nav className='navWrapper'>
+      <ul>
         <li>
           <Link to='/challenges'>
             Challenges
@@ -17,22 +18,17 @@ const Nav = () => {
           </Link>
         </li>
         <li>
-          <Link to='/notifications'>
-            Notifications
+          <Link to='/activity'>
+            Activity
           </Link>
         </li>
         <li>
           <Link to='/profiles/3'>
-            Profile
-          </Link>
-        </li>
-        <li>
-          <Link to='/inbox'>
-            Inbox
+            <Photo name={ props.profile.userName } photo={ props.profile.photo }/>
           </Link>
         </li>
       </ul>
-    </div>
+    </nav>
   );
 };
 
