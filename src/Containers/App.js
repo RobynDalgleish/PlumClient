@@ -15,6 +15,7 @@ class App extends Component {
           <Route exact path="/rewards" component={Rewards}/>
           <Route exact path="/activity" component={Activity}/>
           <Route path="/profiles/:id" component={Profile}/>
+          <Route path='/'component={Root}/>
         </div>
       </Router>
     );

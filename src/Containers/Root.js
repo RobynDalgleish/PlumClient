@@ -1,15 +1,15 @@
-// import React, { Component } from 'react';
+import React, { Component } from 'react';
 
-// class Root extends Component {
+class Root extends Component {
 
-//   render() {
-//     return(
-//       <div>
-//         Root component
-//       </div>
-//     )
-//   }
+  render() {
+    return(
+      <div>
+        Root component
+      </div>
+    )
+  }
 
-// }
+}
 
-// export default Root;
+export default Root;
