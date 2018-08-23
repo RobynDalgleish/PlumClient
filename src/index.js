@@ -3,5 +3,5 @@ import ReactDOM from 'react-dom';
 import App from './Containers/App';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('profiles'));
+ReactDOM.render(<App />, document.getElementById('profile'));
 registerServiceWorker();

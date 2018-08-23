@@ -4,7 +4,6 @@ import Challenges from './Challenges';
 import Rewards from './Rewards';
 import Activity from './Activity';
 import Profile from './Profile';
-import Root from './Root';
 
 class App extends Component {
 
@@ -16,7 +15,6 @@ class App extends Component {
           <Route exact path="/rewards" component={Rewards}/>
           <Route exact path="/activity" component={Activity}/>
           <Route path="/profiles/:id" component={Profile}/>
-          <Route exact path="/"component={Root}/>
         </div>
       </Router>
     );
