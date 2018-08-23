@@ -1,9 +1,10 @@
 .card {
   background-color: $white;
-  border: 1px solid $keyLineGrey;
+  border: 1px solid $borderGrey;
   margin: 15px 0 15px 0;
+  box-shadow: 0 0 12px rgba(0, 0, 0, .05);
 }
 
 .cardPadding {
-  padding: 0 15px 0 15px;
+  padding: 10px 15px 10px 15px;
 }

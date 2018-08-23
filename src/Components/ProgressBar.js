@@ -5,9 +5,7 @@ const ProgressBar = ({ min = 0, max = 100, current = 50 }) => {
 
   return(
     <div className='progressBar'>
-      <div className='progressBarLevel' 
-        style={{ width: width + '%' }}
-      />
+      <div className='progressBarLevel' style={{ width: width + '%' }} />
     </div>
   );
 };

@@ -7,9 +7,13 @@ const getPointsUntilNextLevel = (levelsList, currentPoints) => {
 };
 
 const getNextLevel = (levelsList, currentLevel) => {
-  const currentLevelIndex = levelsList.findIndex(item => item.level === currentLevel);
-  const nextLevel = levelsList[currentLevelIndex + 1]
-  return nextLevel.level
+    const currentLevelIndex = levelsList.findIndex(item => item.level === currentLevel);
+    const nextLevel = levelsList[currentLevelIndex + 1]
+    if (!nextLevel) { 
+      return '???'
+    } else {
+      return nextLevel.level
+    }
 };
 
 const numberWithCommas = (points) => {
@@ -33,9 +37,6 @@ const Status = ({ level, levelsList, points }) => {
   return(
     <div className='cardPadding'>
       <p className='totalPoints'>{ numberWithCommas(points) }</p>
-      {
-        (this.level === "Platinum") ? <p>{ level }</p>
-        :
         <div>
           <ProgressBar { ...statusProgress } />
           <div className='level'>
@@ -44,7 +45,6 @@ const Status = ({ level, levelsList, points }) => {
             <p className='nextLevel'>{ getNextLevel(levelsList, level) }</p>
           </div>
         </div>
-      }
     </div>
   );
 };

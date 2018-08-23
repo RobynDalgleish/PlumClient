@@ -1,7 +1,7 @@
 .totalPoints {
   font-family: 'basier_squareregular', sans-serif;
   font-size: 4.4rem;
-  padding: 12px 0 10px 0;
+  padding: 5px 0 10px 0;
     &:after {
       content: 'PTS';
       font-size: 1.8rem;
@@ -28,4 +28,10 @@
      border-left: 1px solid $keyLineGrey;
      padding: 0 10px 0 10px;
    }
+}
+
+.levelAlone {
+  font-family: 'basier_squaremedium', sans-serif;
+  color: $bodyCopyCards;
+  font-size: 1.6rem;
 }

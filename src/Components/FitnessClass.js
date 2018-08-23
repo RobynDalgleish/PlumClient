@@ -31,15 +31,19 @@ const FitnessClass = ({ data = [], name = '' }) => {
     return(
       <div>
         <h2>{name}</h2>
-        <div className='card'>
+        <div>
           {
             data.map((item, i) => {
               return ( 
-                <div key={i}>
-                  <p>{item.nameOfClass}</p>
-                  <p>{item.instructor}</p>
-                  <p>{ dateInContext(item.date) }</p>
-                  <p>{ moment(item.date).format("MMMM DD @ hh:mma") }</p>
+                <div className='card fitnessClassWrapper' key={i}>
+                  <div className='cardPadding'>
+                    <p className='nameOfClass'>{item.nameOfClass}</p>
+                    <p className='instructor'>{item.instructor}</p>
+                  </div>
+                  <div className='cardPadding'>
+                    <p className='dateInContext'>{ dateInContext(item.date) }</p>
+                    <p className='dateOfClass'>{ moment(item.date).format("MMMM DD @ hh:mma") }</p>
+                  </div>
                 </div> 
               );
             })

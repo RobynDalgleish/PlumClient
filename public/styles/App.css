@@ -168,11 +168,12 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 .card {
   background-color: #FFFFFF;
-  border: 1px solid #D8D8D8;
-  margin: 15px 0 15px 0; }
+  border: 1px solid #E6E6E6;
+  margin: 15px 0 15px 0;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05); }
 
 .cardPadding {
-  padding: 0 15px 0 15px; }
+  padding: 10px 15px 10px 15px; }
 
 .navWrapper {
   background-color: #2F2B5C;
@@ -212,7 +213,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 .profile {
   background-color: #70BCBA;
-  height: 73vh; }
+  height: 70vh; }
 
 .profileWrapper {
   padding: 15px; }
@@ -221,23 +222,23 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
     padding-top: 10px;
     font-size: 3.2rem;
     color: #FFFFFF; }
-  .profileWrapper .chevron {
-    height: 30px;
-    width: 30px; }
 
-.badges h3 {
-  padding: 10px 0 10px 0; }
+.badges {
+  padding: 3px 15px 10px 15px; }
+  .badges h3 {
+    padding-bottom: 10px; }
 
 .badges > div {
   display: flex;
-  padding: 10px 0 10px 0;
+  padding: 5px 0 10px 0;
   border-bottom: 1px solid #D8D8D8;
   text-align: center; }
   .badges > div .badge {
     width: 25%; }
     .badges > div .badge p {
       font-size: 1.4rem;
-      color: #575757; }
+      color: #575757;
+      padding: 5px 0 10px 0; }
     .badges > div .badge img {
       width: 50px;
       height: 50px;
@@ -250,7 +251,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   color: #FF575B;
   font-size: 1.6rem;
   font-family: 'basier_squaremedium', sans-serif;
-  padding: 16px; }
+  padding: 15px 0 5px 0; }
 
 .mainInfo .progressBar {
   background-color: rgba(255, 87, 91, 0.1);
@@ -258,7 +259,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   border-radius: 3.5px; }
   .mainInfo .progressBar .progressBarLevel {
     background-color: #FF575B;
-    height: 100%;
+    height: 7px;
     border-top-left-radius: 3.5px;
     border-bottom-left-radius: 3.5px; }
 
@@ -268,7 +269,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   border-radius: 3.5px; }
   .progressBar .progressBarLevel {
     background-color: #2F2B5C;
-    height: 100%;
+    height: 7px;
     border-top-left-radius: 3.5px;
     border-bottom-left-radius: 3.5px; }
 
@@ -277,12 +278,15 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #D8D8D8;
-  padding: 12px 15px 7px 15px; }
+  padding-top: 13px; }
+  .homeStudio .chevron {
+    height: 30px;
+    width: 30px; }
 
 .totalPoints {
   font-family: 'basier_squareregular', sans-serif;
   font-size: 4.4rem;
-  padding: 12px 0 10px 0; }
+  padding: 5px 0 10px 0; }
   .totalPoints:after {
     content: 'PTS';
     font-size: 1.8rem;
@@ -305,10 +309,124 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
     border-left: 1px solid #D8D8D8;
     padding: 0 10px 0 10px; }
 
+.levelAlone {
+  font-family: 'basier_squaremedium', sans-serif;
+  color: #575757;
+  font-size: 1.6rem; }
+
+.congrats {
+  background-image: url("/assets/pngs/confettiSmall.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 30px; }
+  .congrats > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .congrats > div h2 {
+      font-size: 3.4rem;
+      text-align: center;
+      padding: 40px 0 20px 0; }
+    .congrats > div button {
+      text-decoration: none;
+      background-color: #FF575B;
+      height: 45px;
+      max-width: 314px;
+      width: 100%;
+      border-radius: 5px;
+      border: none;
+      font-family: 'basier_squaremedium', sans-serif;
+      font-size: 1.6rem;
+      color: #FFFFFF; }
+    .congrats > div a {
+      height: 45px;
+      max-width: 314px;
+      width: 100%; }
+
+@media only screen and (min-width: 400px) {
+  .congrats > div {
+    background-color: #FFFFFF;
+    border: 1px solid #E6E6E6;
+    max-width: 900px;
+    width: 100%;
+    padding: 15px;
+    margin: 15px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.05); }
+  .congrats {
+    padding-bottom: 10px; } }
+
+.congratsChallenge {
+  font-size: 1.6rem;
+  color: #575757;
+  text-align: center;
+  border-bottom: 1px solid #D8D8D8;
+  padding: 0 0 20px 0;
+  line-height: 1.4; }
+
+.congratsRewards {
+  font-family: 'basier_squaremedium', sans-serif;
+  font-size: 1.8rem;
+  text-align: center;
+  padding: 20px 0 25px 0; }
+
+.challengeNameAndDetails, .challengePercentAndPts {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  justify-content: space-between;
+  padding: 10px 15px 0 15px; }
+
+.challengePercentAndPts > p:first-child {
+  font-size: 2.8rem;
+  color: #2F2B5C;
+  font-family: 'basier_squareregular', sans-serif; }
+
+.challengePercentAndPts > p:last-child {
+  font-size: 1.8rem;
+  color: #575757; }
+
+.challengeNameAndDetails {
+  border-bottom: 1px solid #D8D8D8;
+  padding: 15px; }
+  .challengeNameAndDetails a {
+    font-family: 'basier_squaremedium', sans-serif;
+    color: #575757;
+    font-size: 1.6rem; }
+
+.challengeProgressBar {
+  padding-bottom: 15px; }
+
+.fitnessClassWrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px; }
+  .fitnessClassWrapper > div:nth-child(even) {
+    padding-left: 0; }
+  .fitnessClassWrapper > div:nth-child(odd) {
+    padding-right: 0; }
+  .fitnessClassWrapper > div > p {
+    padding-bottom: 5px; }
+  .fitnessClassWrapper .nameOfClass {
+    font-size: 1.8rem; }
+  .fitnessClassWrapper .instructor {
+    text-transform: uppercase;
+    font-size: 1.2rem; }
+  .fitnessClassWrapper .dateInContext {
+    text-align: right;
+    font-size: 1.8rem; }
+  .fitnessClassWrapper .dateOfClass {
+    text-align: right;
+    color: #575757;
+    font-size: 1.4rem; }
+
 h2 {
   font-size: 2.4rem;
   font-family: 'basier_squaremedium', sans-serif;
-  font-weight: 1; }
+  font-weight: 1;
+  padding-top: 15px; }
 
 h3 {
   font-size: 1.8rem;
@@ -319,4 +437,5 @@ html {
   background-color: #F7F7F7;
   font-size: 62.5%;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  color: #181839; }

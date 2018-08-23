@@ -1,0 +1,32 @@
+.fitnessClassWrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+    > div {
+      &:nth-child(even){
+        padding-left: 0;
+      }
+      &:nth-child(odd){
+        padding-right: 0;
+      }
+        > p {
+          padding-bottom: 5px;
+        }
+    }
+    .nameOfClass {
+      font-size: 1.8rem;
+    }
+    .instructor {
+      text-transform: uppercase;
+      font-size: 1.2rem;
+    }
+    .dateInContext {
+      text-align: right;
+      font-size: 1.8rem;
+    }
+    .dateOfClass {
+      text-align: right;
+      color: $bodyCopyCards;
+      font-size: 1.4rem;
+    }
+}

@@ -3,5 +3,9 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid $keyLineGrey;
-  padding: 12px 15px 7px 15px;
+  padding-top: 13px;
+    .chevron {
+      height: 30px;
+      width: 30px;
+    }
 }

@@ -1,0 +1,105 @@
+
+.congrats {
+  background-image: url('/assets/pngs/confettiSmall.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 30px;
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+        h2 {
+          font-size: 3.4rem;
+          text-align: center;
+          padding: 40px 0 20px 0;
+        }
+        button {
+          text-decoration: none;
+          background-color: $radPink;
+          height: 45px;
+          max-width: 314px;
+          width: 100%;
+          border-radius: 5px;
+          border: none;
+          font-family: 'basier_squaremedium', sans-serif;
+          font-size: 1.6rem;
+          color: $white;
+        }
+        a{
+          height: 45px;
+          max-width: 314px;
+          width: 100%;
+        }
+    }
+}
+
+@media only screen and (min-width: 400px) {
+  .congrats > div {
+      background-color: $white;
+      border: 1px solid $borderGrey;
+      max-width: 900px;
+      width: 100%;
+      padding: 15px;
+      margin: 15px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, .05);
+
+  }
+  .congrats {
+    padding-bottom: 10px;
+  }
+}
+
+.congratsChallenge {
+  font-size: 1.6rem;
+  color: $bodyCopyCards;
+  text-align: center;
+  border-bottom: 1px solid $keyLineGrey;
+  padding: 0 0 20px 0;
+  line-height: 1.4;
+}
+
+.congratsRewards {
+  font-family: 'basier_squaremedium', sans-serif;
+  font-size: 1.8rem;
+  text-align: center;
+  padding: 20px 0 25px 0;
+}
+
+.challengeNameAndDetails, .challengePercentAndPts {
+  display: flex;
+  align-items: center;
+  padding-top: 10px ;
+  justify-content: space-between;
+  padding: 10px 15px 0 15px;
+}
+
+.challengePercentAndPts > p {
+      &:first-child {
+        font-size: 2.8rem;
+        color: $mainPurple;
+        font-family: 'basier_squareregular', sans-serif;
+      }
+      &:last-child {
+        font-size: 1.8rem;
+        color: $bodyCopyCards;
+      }
+}
+
+.challengeNameAndDetails {
+  border-bottom: 1px solid $keyLineGrey;
+  padding: 15px;
+    a {
+      font-family: 'basier_squaremedium', sans-serif;
+      color: $bodyCopyCards;
+      font-size: 1.6rem;
+    }
+}
+
+.challengeProgressBar {
+  padding-bottom: 15px;
+}
+
+
