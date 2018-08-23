@@ -15,8 +15,8 @@ class Profile extends Component {
 
   componentWillMount() {
     // match is an object on the React Router object
-    // axios.get(`http://server.internproject.hugetointernal.hugeops.com/api/profiles/${this.props.match.params.id}`)
-    axios.get(`http://localhost:8080/api/profiles/${this.props.match.params.id}`)
+    axios.get(`http://server.internproject.hugetointernal.hugeops.com/api/profiles/${this.props.match.params.id}`)
+    // axios.get(`http://localhost:8080/api/profiles/${this.props.match.params.id}`)
       .then(({ data }) => {
         this.setState({
           profile: data
