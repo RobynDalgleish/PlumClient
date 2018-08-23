@@ -27,6 +27,7 @@ const Status = ({ level, levelsList, points }) => {
     currentLevelIndex = i
     return levelItem.level === level;
   });
+  console.log(currentLevel)
   
   const statusProgress = {
     min: currentLevel.level === 'Bronze' ? 0 : levelsList[currentLevelIndex - 1].xpLimit,
