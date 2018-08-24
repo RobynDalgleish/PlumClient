@@ -38,15 +38,11 @@ class Root extends Component {
     return(
       <div>
         <Nav profile={ this.state.profile } />
-        <Router>
-          <div>
-            <Route exact path={`${this.props.match.url}/challenges`} render={(props) => <Challenges profile={ this.state.profile }/>}/>
-            <Route exact path={`${this.props.match.url}/rewards`} render={(props) => <Rewards profile={ this.state.profile }/>}/>
-            <Route exact path={`${this.props.match.url}/activity`} render={(props) => <Activity profile={ this.state.profile }/>}/>
-            <Route exact path={`${this.props.match.url}/congrats`} render={(props) => <Congrats profile={ this.state.profile }/>}/>
-            <Route exact path={this.props.match.url} render={(props) => <Profile profile={ this.state.profile }/>}/>
-          </div>
-        </Router>
+        <Route exact path="/challenges" component={Challenges}/>
+        <Route exact path="/rewards" component={Rewards}/>
+        <Route exact path="/activity" component={Activity}/>
+        <Route exact path={`${this.props.match.url}/congrats`} render={(props) => <Congrats profile={ this.state.profile }/>}/>
+        <Route exact path={this.props.match.url} render={(props) => <Profile profile={ this.state.profile }/>}/>
       </div>
     )
   }
