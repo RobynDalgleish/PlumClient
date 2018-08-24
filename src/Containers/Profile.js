@@ -3,7 +3,6 @@ import HomeStudio from '../Components/HomeStudio';
 import FitnessClass from '../Components/FitnessClass';
 import Challenge from '../Components/Challenge';
 import Badge from '../Components/Badge';
-// import Nav from '../Components/Nav';
 import Status from '../Components/Status';
 
 class Profile extends Component {

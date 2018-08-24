@@ -8,17 +8,17 @@ const Nav = (props) => {
     <nav className='navWrapper'>
       <ul>
         <li>
-          <Link to='/challenges'>
+          <Link to={'/challenges/'}>
             Challenges
           </Link>
         </li>
         <li>
-          <Link to='/rewards'>
+          <Link to={'/rewards/'}>
             Rewards
           </Link>
         </li>
         <li>
-          <Link to='/activity'>
+          <Link to={'/activity/'}>
             Activity
           </Link>
         </li>
