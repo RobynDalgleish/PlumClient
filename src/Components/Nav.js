@@ -23,8 +23,8 @@ const Nav = (props) => {
           </Link>
         </li>
         <li>
-          <Link to='/profiles/3'>
-            <Photo name={ props.profile.userName } photo={ props.profile.photo }/>
+          <Link to={'/profiles/' + props.profile.id}>
+            <Photo name={ props.profile.firstName } photo={ props.profile.photo }/>
           </Link>
         </li>
       </ul>

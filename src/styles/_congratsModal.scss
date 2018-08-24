@@ -1,0 +1,58 @@
+.congratsModal {
+  background-image: url('/assets/images/confetti.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100vw;
+  height: calc(100vh - 60px);
+  background-position: right 0 top -50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.congratsModalCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+    img {
+      margin: 120px 0 30px 0 ;
+      width: 70vw;
+      height: auto;
+      max-width: 400px;
+    }
+    > div {
+      border-top: 1px solid $keyLineGrey;
+      width: 100%;
+      padding-top: 30px;
+    }
+    p {
+      font-family: 'basier_squareregular', sans-serif;
+      font-size: 1.6rem;
+      color: $bodyCopyCards;
+      text-align: center;
+      line-height: 1.4;
+    }
+    > p {
+      padding: 10px 0 30px 0;
+      font-family: 'basier_squaremedium', sans-serif;
+      font-size: 1.8rem;
+      color: $midnight;
+    }
+}
+
+@media only screen and (min-width: 400px) {
+  .congratsModalCard {
+      background-color: $white;
+      border: 1px solid $borderGrey;
+      max-width: 900px;
+      width: 80%;
+      padding: 15px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, .05);
+      padding-bottom: 30px;
+        img {
+          margin: 30px 0 30px 0;
+        }
+  }
+}

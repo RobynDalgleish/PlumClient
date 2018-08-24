@@ -10,8 +10,25 @@
 @import 'status';
 @import 'challenge';
 @import 'fitnessClass';
+@import 'congratsModal';
 
-
+.button {
+  height: 45px;
+  max-width: 314px;
+  width: 100%;
+    button {
+      text-decoration: none;
+      background-color: $radPink;
+      height: 45px;
+      max-width: 314px;
+      width: 100%;
+      border-radius: 5px;
+      border: none;
+      font-family: 'basier_squaremedium', sans-serif;
+      font-size: 1.6rem;
+      color: $white;
+    }
+}
 
 h2 {
   font-size: 2.4rem;

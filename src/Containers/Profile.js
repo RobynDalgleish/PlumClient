@@ -1,31 +1,15 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import HomeStudio from '../Components/HomeStudio';
 import FitnessClass from '../Components/FitnessClass';
 import Challenge from '../Components/Challenge';
 import Badge from '../Components/Badge';
-import Nav from '../Components/Nav';
+// import Nav from '../Components/Nav';
 import Status from '../Components/Status';
 
 class Profile extends Component {
 
   state = {
-    profile: null
-  };
-
-  componentWillMount() {
-    // match is an object on the React Router object
-    axios.get(`http://server.internproject.hugetointernal.hugeops.com/api/profiles/${this.props.match.params.id}`)
-    // axios.get(`http://localhost:8080/api/profiles/${this.props.match.params.id}`)
-      .then(({ data }) => {
-        this.setState({
-          profile: data
-        });
-      })
-      .catch(function (error) {
-        // handle error
-        console.log(error);
-      });
+    profile: this.props.profile
   };
   
   // functions to check if requested data exists in a particular profile before returning the component:
@@ -36,11 +20,11 @@ class Profile extends Component {
     return <Badge data={badges} name={type} />
   };
   
-  renderChallenges = (challenges, type) => {
+  renderChallenges = (challenges, type, id) => {
     if (!challenges || !challenges.length) {
       return null;
     };
-    return <Challenge challenges={challenges} name={type} />
+    return <Challenge challenges={challenges} name={type} id={id}/>
   };
   
   renderClasses = (classes, type) => {
@@ -51,15 +35,10 @@ class Profile extends Component {
   };
       
   render() {
-    
-    if (!this.state.profile) {
-      return <div>Loading...</div>
-    }
+    console.log(this.state.profile)
 
     return(
       <div className='profile'>
-        <Nav profile={this.state.profile}/>
-       
         <div className='profileWrapper'>
          
           <header>
@@ -78,7 +57,7 @@ class Profile extends Component {
           
           <section>
             <div>
-              { this.renderChallenges(this.state.profile.currentChallenges, 'Current Challenges') }
+              { this.renderChallenges(this.state.profile.currentChallenges, 'Current Challenges', this.state.profile.id) }
             </div>
           </section>
          

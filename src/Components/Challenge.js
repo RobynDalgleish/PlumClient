@@ -2,7 +2,7 @@ import React from 'react';
 import ProgressBar from './ProgressBar';
 import { Link } from 'react-router-dom';
 
-const Challenge = ({ challenges = [], name = '' }) => {
+const Challenge = ({ challenges = [], name = '' , id }) => {
 
   if (!challenges.length && !name.length) {
     return null;
@@ -18,12 +18,12 @@ const Challenge = ({ challenges = [], name = '' }) => {
               <div key={i}>
                 { 
                   item.userPoints === item.pointsValue ?
-                  <div className='card cardPadding congrats'>
+                  <div className='card cardPadding congratsCard'>
                     <div>
                       <h2>Congrats!</h2>
-                      <p className='congratsChallenge'>You completed {item.name}! Redeem your challenge for a reward!</p>
-                      <p className='congratsRewards'>{ item.userPoints }pts & { item.rewardName }</p>
-                      <Link to='/rewards'><button>Redeem</button></Link>
+                      <p className='congratsCardChallenge'>You completed {item.name}! Redeem your challenge for a reward!</p>
+                      <p className='congratsCardRewards'>{ item.userPoints }pts & { item.rewardName }</p>
+                      <Link className='button' to={`/profiles/${id}/congrats`}><button>Redeem</button></Link>
                     </div>
                   </div>
                   :

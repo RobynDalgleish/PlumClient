@@ -1,6 +1,6 @@
 
-.congrats {
-  background-image: url('/assets/pngs/confettiSmall.png');
+.congratsCard {
+  background-image: url('/assets/images/confettiSmall.svg');
   background-repeat: no-repeat;
   background-size: 100% auto;
   display: flex;
@@ -16,28 +16,11 @@
           text-align: center;
           padding: 40px 0 20px 0;
         }
-        button {
-          text-decoration: none;
-          background-color: $radPink;
-          height: 45px;
-          max-width: 314px;
-          width: 100%;
-          border-radius: 5px;
-          border: none;
-          font-family: 'basier_squaremedium', sans-serif;
-          font-size: 1.6rem;
-          color: $white;
-        }
-        a{
-          height: 45px;
-          max-width: 314px;
-          width: 100%;
-        }
     }
 }
 
 @media only screen and (min-width: 400px) {
-  .congrats > div {
+  .congratsCard > div {
       background-color: $white;
       border: 1px solid $borderGrey;
       max-width: 900px;
@@ -45,14 +28,13 @@
       padding: 15px;
       margin: 15px;
       box-shadow: 0 0 12px rgba(0, 0, 0, .05);
-
   }
-  .congrats {
+  .congratsCard {
     padding-bottom: 10px;
   }
 }
 
-.congratsChallenge {
+.congratsCardChallenge {
   font-size: 1.6rem;
   color: $bodyCopyCards;
   text-align: center;
@@ -61,7 +43,7 @@
   line-height: 1.4;
 }
 
-.congratsRewards {
+.congratsCardRewards {
   font-family: 'basier_squaremedium', sans-serif;
   font-size: 1.8rem;
   text-align: center;

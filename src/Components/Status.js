@@ -20,7 +20,7 @@ const numberWithCommas = (points) => {
   return points.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-const Status = ( level, levelsList, points ) => {
+const Status = ({ level, levelsList, points }) => {
   
   let currentLevelIndex = 0;
   const currentLevel = levelsList.find((levelItem, i) => {

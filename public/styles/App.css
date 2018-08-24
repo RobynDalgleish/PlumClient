@@ -314,40 +314,25 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   color: #575757;
   font-size: 1.6rem; }
 
-.congrats {
-  background-image: url("/assets/pngs/confettiSmall.png");
+.congratsCard {
+  background-image: url("/assets/images/confettiSmall.svg");
   background-repeat: no-repeat;
   background-size: 100% auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 30px; }
-  .congrats > div {
+  .congratsCard > div {
     display: flex;
     flex-direction: column;
     align-items: center; }
-    .congrats > div h2 {
+    .congratsCard > div h2 {
       font-size: 3.4rem;
       text-align: center;
       padding: 40px 0 20px 0; }
-    .congrats > div button {
-      text-decoration: none;
-      background-color: #FF575B;
-      height: 45px;
-      max-width: 314px;
-      width: 100%;
-      border-radius: 5px;
-      border: none;
-      font-family: 'basier_squaremedium', sans-serif;
-      font-size: 1.6rem;
-      color: #FFFFFF; }
-    .congrats > div a {
-      height: 45px;
-      max-width: 314px;
-      width: 100%; }
 
 @media only screen and (min-width: 400px) {
-  .congrats > div {
+  .congratsCard > div {
     background-color: #FFFFFF;
     border: 1px solid #E6E6E6;
     max-width: 900px;
@@ -355,10 +340,10 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
     padding: 15px;
     margin: 15px;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.05); }
-  .congrats {
+  .congratsCard {
     padding-bottom: 10px; } }
 
-.congratsChallenge {
+.congratsCardChallenge {
   font-size: 1.6rem;
   color: #575757;
   text-align: center;
@@ -366,7 +351,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   padding: 0 0 20px 0;
   line-height: 1.4; }
 
-.congratsRewards {
+.congratsCardRewards {
   font-family: 'basier_squaremedium', sans-serif;
   font-size: 1.8rem;
   text-align: center;
@@ -421,6 +406,72 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
     text-align: right;
     color: #575757;
     font-size: 1.4rem; }
+
+.congratsModal {
+  background-image: url("/assets/images/confetti.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100vw;
+  height: calc(100vh - 60px);
+  background-position: right 0 top -50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.congratsModalCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; }
+  .congratsModalCard img {
+    margin: 120px 0 30px 0;
+    width: 70vw;
+    height: auto;
+    max-width: 400px; }
+  .congratsModalCard > div {
+    border-top: 1px solid #D8D8D8;
+    width: 100%;
+    padding-top: 30px; }
+  .congratsModalCard p {
+    font-family: 'basier_squareregular', sans-serif;
+    font-size: 1.6rem;
+    color: #575757;
+    text-align: center;
+    line-height: 1.4; }
+  .congratsModalCard > p {
+    padding: 10px 0 30px 0;
+    font-family: 'basier_squaremedium', sans-serif;
+    font-size: 1.8rem;
+    color: #181839; }
+
+@media only screen and (min-width: 400px) {
+  .congratsModalCard {
+    background-color: #FFFFFF;
+    border: 1px solid #E6E6E6;
+    max-width: 900px;
+    width: 80%;
+    padding: 15px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+    padding-bottom: 30px; }
+    .congratsModalCard img {
+      margin: 30px 0 30px 0; } }
+
+.button {
+  height: 45px;
+  max-width: 314px;
+  width: 100%; }
+  .button button {
+    text-decoration: none;
+    background-color: #FF575B;
+    height: 45px;
+    max-width: 314px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    font-family: 'basier_squaremedium', sans-serif;
+    font-size: 1.6rem;
+    color: #FFFFFF; }
 
 h2 {
   font-size: 2.4rem;
