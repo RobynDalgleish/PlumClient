@@ -5,7 +5,7 @@ class Rewards extends Component {
   render() {
     return(
       <div>
-        
+        Rewards Container
       </div>
     )
   }

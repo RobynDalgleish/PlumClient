@@ -430,20 +430,19 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
     height: auto;
     max-width: 400px; }
   .congratsModalCard > div {
-    border-top: 1px solid #D8D8D8;
-    width: 100%;
-    padding-top: 30px; }
+    width: calc(100% - 60px);
+    margin: 0 30px 0 30px; }
   .congratsModalCard p {
+    font-family: 'basier_squaremedium', sans-serif;
+    font-size: 1.8rem;
+    text-align: center;
+    color: #181839;
+    line-height: 1.4; }
+  .congratsModalCard > p {
     font-family: 'basier_squareregular', sans-serif;
     font-size: 1.6rem;
     color: #575757;
-    text-align: center;
-    line-height: 1.4; }
-  .congratsModalCard > p {
-    padding: 10px 0 30px 0;
-    font-family: 'basier_squaremedium', sans-serif;
-    font-size: 1.8rem;
-    color: #181839; }
+    padding: 10px 0 30px 0; }
 
 @media only screen and (min-width: 400px) {
   .congratsModalCard {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Badge = ({ data = [], name = '' }) => {
+const Badge = ({ data = [], name = '', id}) => {
   
   if (!data.length && !name.length) {
     return null;
@@ -22,7 +22,7 @@ const Badge = ({ data = [], name = '' }) => {
           })
         }
       </div>
-      <Link className='viewAllBadges' to='/rewards'>See All</Link>
+      <Link className='viewAllBadges' to={'/profiles/' + id + '/rewards/'}>See All</Link>
     </div>
   );
 };

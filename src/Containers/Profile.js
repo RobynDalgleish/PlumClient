@@ -12,11 +12,11 @@ class Profile extends Component {
   };
   
   // functions to check if requested data exists in a particular profile before returning the component:
-  renderBadges = (badges, type) => {
+  renderBadges = (badges, type, id) => {
     if (!badges || !badges.length) {
       return null;
     };
-    return <Badge data={badges} name={type} />
+    return <Badge data={badges} name={type} id={id}/>
   };
   
   renderChallenges = (challenges, type, id) => {
@@ -46,10 +46,10 @@ class Profile extends Component {
           
           <section className='mainInfo'>
             <div className='card'>
-              <HomeStudio data={ this.state.profile.homeStudio} name={ 'Home Studio' } />
-              <Status level={this.state.profile.level} levelsList={this.state.profile.levelsList} points={this.state.profile.points} />
+            <HomeStudio data={ this.state.profile.homeStudio} name={ 'Home Studio' } />
+            <Status level={this.state.profile.level} levelsList={this.state.profile.levelsList} points={this.state.profile.points} />
               <div>
-                { this.renderBadges(this.state.profile.badges, 'Badges')}
+                { this.renderBadges(this.state.profile.badges, 'Badges', this.state.profile.id)}
               </div>
             </div>
           </section>
