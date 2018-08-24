@@ -10,7 +10,7 @@ const Congrats = (props) => {
           <p>{ props.profile.currentChallenges[0].pointsValue }pts + { props.profile.currentChallenges[0].rewardName }</p> 
         </div>
         <p>have been added to your profile!</p>
-        <Link className='button' to={`/profiles/${props.id}`}><button>Back</button></Link>
+        <Link className='button' to={`/profiles/${props.profile.id}`}><button>Back</button></Link>
       </div>
     </div>
   );
