@@ -558,55 +558,63 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   .activityWrapper .cardPadding {
     padding: 20px; }
 
+.invitesCard {
+  padding: 20px 20px 15px 20px; }
+
 .declineAccept {
   display: flex;
   font-size: 1.6rem;
   justify-content: flex-end; }
 
-.activityCard a:first-child {
+.invitesCard a:first-child {
   color: #757575;
   text-decoration: underline;
-  padding: 0 20px 0 20px; }
+  padding: 0 30px 0 0; }
 
-.activityCard a:last-child {
+.invitesCard a:last-child {
   font-family: 'basier_squaremedium', sans-serif;
   color: #FF575B; }
 
-.activityRequest {
+.invitesRequest {
   display: flex; }
-  .activityRequest img {
+  .invitesRequest img {
     height: 53px;
     width: 53px;
     border-radius: 50%; }
-  .activityRequest .activityRequestContainer {
+  .invitesRequest .invitesRequestContainer {
     display: flex;
     padding-left: 15px;
     justify-content: space-between;
     width: 100%;
     color: #181839;
     font-size: 1.6rem; }
-    .activityRequest .activityRequestContainer .activityRequestText {
+    .invitesRequest .invitesRequestContainer .invitesRequestText {
       padding: 0 15px 10px 0; }
-      .activityRequest .activityRequestContainer .activityRequestText span {
+      .invitesRequest .invitesRequestContainer .invitesRequestText span {
         color: #757575;
         text-decoration: underline; }
-  .activityRequest .x {
+  .invitesRequest .x {
     width: 12px;
     height: 12px; }
 
-.activityDate {
+.invitesDate {
   font-family: 'basier_squaremedium', sans-serif;
   font-size: 1.2rem;
   color: #757575;
   text-transform: uppercase;
-  padding-bottom: 15px; }
+  padding-bottom: 15px;
+  letter-spacing: .5px; }
 
 .details {
   display: flex;
   font-size: 1.6rem;
-  justify-content: flex-end;
+  justify-content: space-between;
   text-decoration: none;
-  color: #FF575B; }
+  color: #FF575B;
+  font-family: 'basier_squaremedium', sans-serif; }
+
+.notificationsCard {
+  padding: 20px 20px 5px 20px; }
 
 .notificationsRequest {
   display: flex; }
@@ -614,9 +622,11 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
     height: 53px;
     width: 53px;
     border-radius: 50%; }
+  .notificationsRequest .notificationsRequestContainerContainer {
+    padding-left: 15px;
+    width: 100%; }
   .notificationsRequest .notificationsRequestContainer {
     display: flex;
-    padding-left: 15px;
     justify-content: space-between;
     width: 100%;
     color: #181839;
@@ -635,7 +645,8 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   font-size: 1.2rem;
   color: #757575;
   text-transform: uppercase;
-  padding-bottom: 15px; }
+  padding-bottom: 15px;
+  letter-spacing: .5px; }
 
 .button {
   height: 45px;

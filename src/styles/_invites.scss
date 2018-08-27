@@ -5,17 +5,21 @@
     }
 }
 
+.invitesCard {
+  padding: 20px 20px 15px 20px;
+}
+
 .declineAccept {
   display: flex;
   font-size: 1.6rem;
   justify-content: flex-end;
 }
 
-.activityCard{
+.invitesCard{
     a:first-child {
       color: $secondaryTextButton;
       text-decoration: underline;
-      padding: 0 20px 0 20px;
+      padding: 0 30px 0 0;
     }
     a:last-child {
       font-family: 'basier_squaremedium', sans-serif;
@@ -23,21 +27,21 @@
     }
 }
 
-.activityRequest {
+.invitesRequest {
   display: flex;
    img {
      height: 53px;
      width: 53px;
      border-radius: 50%;
    }
-   .activityRequestContainer {
+   .invitesRequestContainer {
     display: flex;
     padding-left: 15px;
     justify-content: space-between;
     width: 100%;
     color: $midnight;
     font-size: 1.6rem;
-      .activityRequestText {
+      .invitesRequestText {
         padding: 0 15px 10px 0;
           span {
           color: $secondaryTextButton;
@@ -51,10 +55,11 @@
    }
 }
 
-.activityDate {
+.invitesDate {
   font-family: 'basier_squaremedium', sans-serif;
   font-size: 1.2rem;
   color: $secondaryTextButton;
   text-transform: uppercase;
   padding-bottom: 15px;
+  letter-spacing: .5px;
 }

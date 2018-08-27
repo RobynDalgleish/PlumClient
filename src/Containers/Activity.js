@@ -15,10 +15,10 @@ class Activity extends Component {
           </TabList>
 
           <TabPanel>
-            <Notifications notifications={this.props.profile.activity}/>
+            <Notifications notifications={this.props.profile.notifications}/>
           </TabPanel>
           <TabPanel>
-            <Invites invites={this.props.profile.activity}/>
+            <Invites invites={this.props.profile.invites}/>
           </TabPanel>
         </Tabs>
       </div>
