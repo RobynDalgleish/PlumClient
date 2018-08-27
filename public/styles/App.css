@@ -566,12 +566,16 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   font-size: 1.6rem;
   justify-content: flex-end; }
 
-.invitesCard a:first-child {
+.invitesCard button {
+  border: none;
+  background-color: transparent; }
+
+.invitesCard .decline {
   color: #757575;
   text-decoration: underline;
   padding: 0 30px 0 0; }
 
-.invitesCard a:last-child {
+.invitesCard button:last-child {
   font-family: 'basier_squaremedium', sans-serif;
   color: #FF575B; }
 
@@ -590,12 +594,14 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
     font-size: 1.6rem; }
     .invitesRequest .invitesRequestContainer .invitesRequestText {
       padding: 0 15px 10px 0; }
-      .invitesRequest .invitesRequestContainer .invitesRequestText span {
+      .invitesRequest .invitesRequestContainer .invitesRequestText a {
         color: #757575;
         text-decoration: underline; }
   .invitesRequest .x {
     width: 12px;
     height: 12px; }
+  .invitesRequest button {
+    border: none; }
 
 .invitesDate {
   font-family: 'basier_squaremedium', sans-serif;
@@ -610,11 +616,13 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   font-size: 1.6rem;
   justify-content: space-between;
   text-decoration: none;
-  color: #FF575B;
   font-family: 'basier_squaremedium', sans-serif; }
+  .details button {
+    color: #FF575B;
+    background-color: transparent; }
 
 .notificationsCard {
-  padding: 20px 20px 5px 20px; }
+  padding: 20px 20px 15px 20px; }
 
 .notificationsRequest {
   display: flex; }
@@ -633,19 +641,22 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
     font-size: 1.6rem; }
     .notificationsRequest .notificationsRequestContainer .notificationsRequestText {
       padding: 0 15px 10px 0; }
-      .notificationsRequest .notificationsRequestContainer .notificationsRequestText span {
+      .notificationsRequest .notificationsRequestContainer .notificationsRequestText a {
         color: #757575;
         text-decoration: underline; }
   .notificationsRequest .x {
     width: 12px;
-    height: 12px; }
+    height: 12px;
+    background-color: transparent; }
+  .notificationsRequest button {
+    border: none;
+    background-color: transparent; }
 
 .notificationsDate {
   font-family: 'basier_squaremedium', sans-serif;
   font-size: 1.2rem;
   color: #757575;
   text-transform: uppercase;
-  padding-bottom: 15px;
   letter-spacing: .5px; }
 
 .button {

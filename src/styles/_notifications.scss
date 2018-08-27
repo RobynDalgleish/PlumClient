@@ -3,12 +3,15 @@
   font-size: 1.6rem;
   justify-content: space-between;
   text-decoration: none;
-  color: $radPink;
   font-family: 'basier_squaremedium', sans-serif;
+    button {
+      color: $radPink;
+      background-color: transparent;
+    }
 }
 
 .notificationsCard {
-  padding: 20px 20px 5px 20px;
+  padding: 20px 20px 15px 20px;
 }
 
 .notificationsRequest {
@@ -31,7 +34,7 @@ display: flex;
   font-size: 1.6rem;
     .notificationsRequestText {
       padding: 0 15px 10px 0;
-        span {
+        a {
         color: $secondaryTextButton;
         text-decoration: underline;
         }
@@ -40,6 +43,11 @@ display: flex;
  .x {
    width: 12px;
    height: 12px;
+   background-color: transparent;
+ }
+ button {
+  border: none;
+  background-color: transparent;
  }
 }
 
@@ -48,6 +56,5 @@ display: flex;
   font-size: 1.2rem;
   color: $secondaryTextButton;
   text-transform: uppercase;
-  padding-bottom: 15px;
   letter-spacing: .5px;
 }

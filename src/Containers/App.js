@@ -5,9 +5,7 @@ import Root from './Root';
 class App extends Component {
 
   render() {
-
     return(
-
       <Router>
         <Route path='/profiles/:id' component={ Root } />
       </Router>

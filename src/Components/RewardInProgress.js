@@ -1,6 +1,11 @@
 import React from 'react';
 
 const RewardInProgress = ({ rewards }) => {
+
+  if (!rewards.length && !rewards.length) {
+    return null;
+  }
+
   return(
     rewards.map((item, i) => {
       return(

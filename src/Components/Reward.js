@@ -3,6 +3,11 @@ import moment from 'moment';
 
 
 const Reward = ({ rewards }) => {
+
+  if (!rewards.length && !rewards.length) {
+    return null;
+  }
+
   return(
     rewards.map((item, i) => {
       return(

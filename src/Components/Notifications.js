@@ -1,12 +1,21 @@
 import React from 'react';
 import moment from 'moment';
 
+// function remove() {
+//     let x = document.getElementById('card'); 
+//     x.style.display = 'none';
+//   }
 
 const Notifications = ({ notifications }) => {
+
+  if (!notifications.length && !notifications.length) {
+    return null;
+  }
+
   return(
     notifications.map((item, i) => {
       return(
-        <div className='card notificationsCard' key={i}>
+        <div className='card notificationsCard' id='card' key={i}>
           <div className='notificationsRequest'>
             <div>
               <img alt='' src={item.photo} />
@@ -15,15 +24,15 @@ const Notifications = ({ notifications }) => {
             <div className='notificationsRequestContainerContainer'>
               <div className='notificationsRequestContainer'>
                 <div>
-                  <p className='notificationsRequestText'><span>{ item.userName }</span> completed the <span>{ item.challengeName }</span> challenge</p>
+                  <p className='notificationsRequestText'><a>{ item.userName }</a> completed the <a>{ item.challengeName }</a> challenge</p>
                 </div>
                 <div>
-                  <a><img className='x' alt='' src='/assets/images/x_icon.svg' /></a>
+                  <button ><img className='x' alt='' src='/assets/images/x_icon.svg' /></button>
                 </div>
               </div>
               <div className='details'>
                 <p className='notificationsDate'>{ moment(item.date).startOf("day").fromNow() }</p>
-                <a>Details</a>
+                <button>Details</button>
               </div>
             </div>
 
