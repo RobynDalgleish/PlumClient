@@ -1,12 +1,14 @@
-.mainInfo .progressBar {
+.mainInfo, .rewards {
+  .progressBar {
   background-color: $radPinkLight;
   height: 7px;
   border-radius: 3.5px;
-  .progressBarLevel {
-    background-color: $radPink;
-    height: 7px;
-    border-top-left-radius: 3.5px;
-    border-bottom-left-radius: 3.5px;
+      .progressBarLevel {
+        background-color: $radPink;
+        height: 7px;
+        border-top-left-radius: 3.5px;
+        border-bottom-left-radius: 3.5px;
+      }
   }
 }
 

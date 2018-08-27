@@ -5,7 +5,7 @@ import Challenges from './Challenges';
 import Rewards from './Rewards';
 import Activity from './Activity';
 import Profile from './Profile';
-import Congrats from './Congrats';
+import Congrats from '../Components/Congrats';
 import Nav from '../Components/Nav'
 
 class Root extends Component {

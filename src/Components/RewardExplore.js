@@ -1,26 +1,22 @@
 import React from 'react';
-import moment from 'moment';
 
-
-const Reward = ({ rewards }) => {
+const RewardExplore = ({ rewards }) => {
   return(
     rewards.map((item, i) => {
       return(
         <div className='card rewardCard' key={i}>
           <div className='cardPadding'>
             <p className='nameOfReward'>{ item.nameOfReward }</p>
-            <a>Details</a>
           </div>
           <div className='cardPadding'>
-            <p className='rewardDate'>{ moment(item.date).format("MMMM DD") }</p>
             <p className='rewardDescription'>{ item.descriptionOfReward }</p>
           </div>
           <div className='cardPadding unlockedRedeem'>
             <div>
-              <img className='unlocked' alt='' src='/assets/images/unlocked.svg' />
-              <p>Unlocked</p>
+              <img className='unlocked' alt='' src='/assets/images/lock.svg' />
+              <p>Locked</p>
             </div>
-            <a>Redeem</a>
+            <a>Details</a>
           </div>
         </div>
       );
@@ -28,4 +24,4 @@ const Reward = ({ rewards }) => {
   )
 };
 
-export default Reward;
+export default RewardExplore;

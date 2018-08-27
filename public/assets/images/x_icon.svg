@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="132px" height="132px" viewBox="0 0 132 132" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
-    <title>x_icon</title>
+    <title>ic_close_18px copy</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="x_icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <polygon id="Shape" fill="#757575" fill-rule="nonzero" points="88 48.2169982 83.7830018 44 66 61.7830018 48.2169982 44 44 48.2169982 61.7830018 66 44 83.7830018 48.2169982 88 66 70.2169982 83.7830018 88 88 83.7830018 70.2169982 66"></polygon>
+    <g id="Final-MVP-Screens" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Activity-—-Notifications-Copy" transform="translate(-328.000000, -593.000000)" fill="#757575" fill-rule="nonzero">
+            <g id="ic_close_18px-copy" transform="translate(328.000000, 593.000000)">
+                <polygon id="Shape" points="11.53 1.53 10.47 0.47 6 4.94 1.53 0.47 0.47 1.53 4.94 6 0.47 10.47 1.53 11.53 6 7.06 10.47 11.53 11.53 10.47 7.06 6"></polygon>
+            </g>
+        </g>
     </g>
 </svg>

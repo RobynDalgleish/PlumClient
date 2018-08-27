@@ -1,0 +1,14 @@
+.tabsList {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.7rem;
+  font-family: 'basier_squaremedium', sans-serif;
+  padding: 15px 0 15px 0;
+  .react-tabs__tab--selected {
+  
+      border-bottom: 3px solid $radPink;
+    
+  }
+}
+

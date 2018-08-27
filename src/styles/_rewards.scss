@@ -1,0 +1,107 @@
+
+.rewards {
+  background-color: $torqueT;
+  height: 30vh;
+}
+
+.rewardsWrapper {
+  padding: 15px;
+    // make below a mixin for profile and rewards pages
+    h1 {
+      font-family: 'basier_squaresemibold', sans-serif;
+      padding-top: 10px;
+      font-size: 3.2rem;
+      color: $white;
+    }
+    .level {
+      border-bottom: none;
+      padding: 14px 10px 5px 0;
+    }
+}
+
+.rewardInProgressCard {
+  display: flex;
+   > div {
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+   }
+   a {
+    color: $radPink;
+    font-size: 1.6rem;
+    font-family: 'basier_squaremedium', sans-serif;
+  }
+}
+
+.rewardCard > div:first-child {
+  display: flex;
+  border-bottom: 1px solid $keyLineGrey;
+  justify-content: space-between;
+  font-family: 'basier_squaremedium', sans-serif;
+    a {
+      color: $bodyCopyCards;
+      font-size: 1.6rem;
+      text-decoration: underline;
+    }
+}
+
+.nameOfReward {
+  font-family: 'basier_squaremedium', sans-serif;
+  font-size: 1.8rem;
+}
+
+.rewardDate {
+  font-family: 'basier_squaremedium', sans-serif;
+  font-size: 1.2rem;
+  color: $secondaryTextButton;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}
+
+.rewardDescription {
+  font-family: 'basier_squareregular', sans-serif;
+  color: $secondaryTextButton;
+  font-size: 1.6rem;
+}
+
+.pts {
+  font-family: 'basier_squareregular', sans-serif;
+  font-size: 1.4rem;
+  color: $secondaryTextButton;
+  padding: 4px 0 7px 0;
+}
+
+.lockContainer {
+  margin: 20px;
+  height: 70px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 3px solid $midnight;
+  border-radius: 50%;
+    img {
+      height: 70%;
+      padding-bottom: 3px;
+    }
+}
+
+.unlockedRedeem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6rem;
+    a {
+      font-family: 'basier_squaremedium', sans-serif;
+      color: $radPink;
+    }
+    > div {
+      display: flex;
+      align-items: center;
+    }
+    img {
+      height: 22px;
+      padding-right: 10px;
+    }
+}

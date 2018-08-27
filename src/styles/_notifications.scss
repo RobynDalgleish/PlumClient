@@ -1,0 +1,43 @@
+.details {
+  display: flex;
+  font-size: 1.6rem;
+  justify-content: flex-end;
+  text-decoration: none;
+  color: $radPink;
+}
+
+.notificationsRequest {
+display: flex;
+ img {
+   height: 53px;
+   width: 53px;
+   border-radius: 50%;
+ }
+ .notificationsRequestContainer {
+  display: flex;
+  padding-left: 15px;
+  justify-content: space-between;
+  width: 100%;
+  color: $midnight;
+  font-size: 1.6rem;
+    .notificationsRequestText {
+      padding: 0 15px 10px 0;
+        span {
+        color: $secondaryTextButton;
+        text-decoration: underline;
+        }
+    } 
+ }
+ .x {
+   width: 12px;
+   height: 12px;
+ }
+}
+
+.notificationsDate {
+font-family: 'basier_squaremedium', sans-serif;
+font-size: 1.2rem;
+color: $secondaryTextButton;
+text-transform: uppercase;
+padding-bottom: 15px;
+}

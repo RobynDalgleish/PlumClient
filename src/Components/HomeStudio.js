@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const HomeStudio = ({ data = {}, name = '' }) => {
+const HomeStudio = ({ data }) => {
     
-  if (!data.length && !name.length) {
+  if (!data.name.length) {
     return null;
   }
 

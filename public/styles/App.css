@@ -217,7 +217,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 .profileWrapper {
   padding: 15px; }
-  .profileWrapper .userName {
+  .profileWrapper h1 {
     font-family: 'basier_squaresemibold', sans-serif;
     padding-top: 10px;
     font-size: 3.2rem;
@@ -253,11 +253,11 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   font-family: 'basier_squaremedium', sans-serif;
   padding: 15px 0 5px 0; }
 
-.mainInfo .progressBar {
+.mainInfo .progressBar, .rewards .progressBar {
   background-color: rgba(255, 87, 91, 0.1);
   height: 7px;
   border-radius: 3.5px; }
-  .mainInfo .progressBar .progressBarLevel {
+  .mainInfo .progressBar .progressBarLevel, .rewards .progressBar .progressBarLevel {
     background-color: #FF575B;
     height: 7px;
     border-top-left-radius: 3.5px;
@@ -455,6 +455,187 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
     padding-bottom: 30px; }
     .congratsModalCard img {
       margin: 30px 0 30px 0; } }
+
+.rewards {
+  background-color: #70BCBA;
+  height: 30vh; }
+
+.rewardsWrapper {
+  padding: 15px; }
+  .rewardsWrapper h1 {
+    font-family: 'basier_squaresemibold', sans-serif;
+    padding-top: 10px;
+    font-size: 3.2rem;
+    color: #FFFFFF; }
+  .rewardsWrapper .level {
+    border-bottom: none;
+    padding: 14px 10px 5px 0; }
+
+.rewardInProgressCard {
+  display: flex; }
+  .rewardInProgressCard > div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; }
+  .rewardInProgressCard a {
+    color: #FF575B;
+    font-size: 1.6rem;
+    font-family: 'basier_squaremedium', sans-serif; }
+
+.rewardCard > div:first-child {
+  display: flex;
+  border-bottom: 1px solid #D8D8D8;
+  justify-content: space-between;
+  font-family: 'basier_squaremedium', sans-serif; }
+  .rewardCard > div:first-child a {
+    color: #575757;
+    font-size: 1.6rem;
+    text-decoration: underline; }
+
+.nameOfReward {
+  font-family: 'basier_squaremedium', sans-serif;
+  font-size: 1.8rem; }
+
+.rewardDate {
+  font-family: 'basier_squaremedium', sans-serif;
+  font-size: 1.2rem;
+  color: #757575;
+  text-transform: uppercase;
+  padding-bottom: 5px; }
+
+.rewardDescription {
+  font-family: 'basier_squareregular', sans-serif;
+  color: #757575;
+  font-size: 1.6rem; }
+
+.pts {
+  font-family: 'basier_squareregular', sans-serif;
+  font-size: 1.4rem;
+  color: #757575;
+  padding: 4px 0 7px 0; }
+
+.lockContainer {
+  margin: 20px;
+  height: 70px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 3px solid #181839;
+  border-radius: 50%; }
+  .lockContainer img {
+    height: 70%;
+    padding-bottom: 3px; }
+
+.unlockedRedeem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6rem; }
+  .unlockedRedeem a {
+    font-family: 'basier_squaremedium', sans-serif;
+    color: #FF575B; }
+  .unlockedRedeem > div {
+    display: flex;
+    align-items: center; }
+  .unlockedRedeem img {
+    height: 22px;
+    padding-right: 10px; }
+
+.tabsList {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.7rem;
+  font-family: 'basier_squaremedium', sans-serif;
+  padding: 15px 0 15px 0; }
+  .tabsList .react-tabs__tab--selected {
+    border-bottom: 3px solid #FF575B; }
+
+.activityWrapper {
+  padding: 15px; }
+  .activityWrapper .cardPadding {
+    padding: 20px; }
+
+.declineAccept {
+  display: flex;
+  font-size: 1.6rem;
+  justify-content: flex-end; }
+
+.activityCard a:first-child {
+  color: #757575;
+  text-decoration: underline;
+  padding: 0 20px 0 20px; }
+
+.activityCard a:last-child {
+  font-family: 'basier_squaremedium', sans-serif;
+  color: #FF575B; }
+
+.activityRequest {
+  display: flex; }
+  .activityRequest img {
+    height: 53px;
+    width: 53px;
+    border-radius: 50%; }
+  .activityRequest .activityRequestContainer {
+    display: flex;
+    padding-left: 15px;
+    justify-content: space-between;
+    width: 100%;
+    color: #181839;
+    font-size: 1.6rem; }
+    .activityRequest .activityRequestContainer .activityRequestText {
+      padding: 0 15px 10px 0; }
+      .activityRequest .activityRequestContainer .activityRequestText span {
+        color: #757575;
+        text-decoration: underline; }
+  .activityRequest .x {
+    width: 12px;
+    height: 12px; }
+
+.activityDate {
+  font-family: 'basier_squaremedium', sans-serif;
+  font-size: 1.2rem;
+  color: #757575;
+  text-transform: uppercase;
+  padding-bottom: 15px; }
+
+.details {
+  display: flex;
+  font-size: 1.6rem;
+  justify-content: flex-end;
+  text-decoration: none;
+  color: #FF575B; }
+
+.notificationsRequest {
+  display: flex; }
+  .notificationsRequest img {
+    height: 53px;
+    width: 53px;
+    border-radius: 50%; }
+  .notificationsRequest .notificationsRequestContainer {
+    display: flex;
+    padding-left: 15px;
+    justify-content: space-between;
+    width: 100%;
+    color: #181839;
+    font-size: 1.6rem; }
+    .notificationsRequest .notificationsRequestContainer .notificationsRequestText {
+      padding: 0 15px 10px 0; }
+      .notificationsRequest .notificationsRequestContainer .notificationsRequestText span {
+        color: #757575;
+        text-decoration: underline; }
+  .notificationsRequest .x {
+    width: 12px;
+    height: 12px; }
+
+.notificationsDate {
+  font-family: 'basier_squaremedium', sans-serif;
+  font-size: 1.2rem;
+  color: #757575;
+  text-transform: uppercase;
+  padding-bottom: 15px; }
 
 .button {
   height: 45px;

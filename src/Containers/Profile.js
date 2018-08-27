@@ -6,10 +6,6 @@ import Badge from '../Components/Badge';
 import Status from '../Components/Status';
 
 class Profile extends Component {
-
-  state = {
-    profile: this.props.profile
-  };
   
   // functions to check if requested data exists in a particular profile before returning the component:
   renderBadges = (badges, type, id) => {
@@ -34,38 +30,38 @@ class Profile extends Component {
   };
       
   render() {
-    console.log(this.state.profile)
+    console.log(this.props.profile)
 
     return(
       <div className='profile'>
         <div className='profileWrapper'>
          
           <header>
-            <h1 className='userName'>Hey { this.state.profile.firstName },</h1>
+            <h1 className='userName'>Hey { this.props.profile.firstName },</h1>
           </header>
           
           <section className='mainInfo'>
             <div className='card'>
-            <HomeStudio data={ this.state.profile.homeStudio} name={ 'Home Studio' } />
-            <Status level={this.state.profile.level} levelsList={this.state.profile.levelsList} points={this.state.profile.points} />
+              <HomeStudio data={ this.props.profile.homeStudio } />
+              <Status level={this.props.profile.level} levelsList={this.props.profile.levelsList} points={this.props.profile.points} />
               <div>
-                { this.renderBadges(this.state.profile.badges, 'Badges', this.state.profile.id)}
+                { this.renderBadges(this.props.profile.badges, 'Badges', this.props.profile.id)}
               </div>
             </div>
           </section>
           
           <section>
             <div>
-              { this.renderChallenges(this.state.profile.currentChallenges, 'Current Challenges', this.state.profile.id) }
+              { this.renderChallenges(this.props.profile.currentChallenges, 'Current Challenges', this.props.profile.id) }
             </div>
           </section>
          
           <section>
-            { this.renderClasses(this.state.profile.upcomingClasses, 'Upcoming Classes') }
+            { this.renderClasses(this.props.profile.upcomingClasses, 'Upcoming Classes') }
           </section>
           
           {/* <section>
-            { this.renderFriends(this.state.profile.friends, 'Friends') }
+            { this.renderFriends(this.props.profile.friends, 'Friends') }
           </section> */}
 
         </div>

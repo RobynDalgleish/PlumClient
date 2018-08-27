@@ -1,0 +1,60 @@
+.activityWrapper {
+  padding: 15px;
+    .cardPadding {
+      padding: 20px;
+    }
+}
+
+.declineAccept {
+  display: flex;
+  font-size: 1.6rem;
+  justify-content: flex-end;
+}
+
+.activityCard{
+    a:first-child {
+      color: $secondaryTextButton;
+      text-decoration: underline;
+      padding: 0 20px 0 20px;
+    }
+    a:last-child {
+      font-family: 'basier_squaremedium', sans-serif;
+      color: $radPink;
+    }
+}
+
+.activityRequest {
+  display: flex;
+   img {
+     height: 53px;
+     width: 53px;
+     border-radius: 50%;
+   }
+   .activityRequestContainer {
+    display: flex;
+    padding-left: 15px;
+    justify-content: space-between;
+    width: 100%;
+    color: $midnight;
+    font-size: 1.6rem;
+      .activityRequestText {
+        padding: 0 15px 10px 0;
+          span {
+          color: $secondaryTextButton;
+          text-decoration: underline;
+          }
+      } 
+   }
+   .x {
+     width: 12px;
+     height: 12px;
+   }
+}
+
+.activityDate {
+  font-family: 'basier_squaremedium', sans-serif;
+  font-size: 1.2rem;
+  color: $secondaryTextButton;
+  text-transform: uppercase;
+  padding-bottom: 15px;
+}
