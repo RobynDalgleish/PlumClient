@@ -22,7 +22,7 @@
         letter-spacing: .1px;
         height: 60px;
         display: flex;
-          &:hover, &:focus{
+          &:hover, &:focus, &:active{
             border-top: 2px solid transparent;
             border-bottom: 2px solid $white;
           }

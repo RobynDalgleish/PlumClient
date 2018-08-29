@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { ConfettiWrapper } from './confetti-wrapper';
 
 const Congrats = (props) => {
   return(
-    <div className='congratsModal'>
+    <ConfettiWrapper confettiNumber={300}> 
+      <div className='congratsModal'>
       <div className='congratsModalCard'>
         <img className='wooho' alt='' src='/assets/images/wooho.svg' />
         <div>
@@ -13,6 +15,7 @@ const Congrats = (props) => {
         <Link className='button' to={`/profiles/${props.profile.id}`}><button>Back</button></Link>
       </div>
     </div>
+    </ConfettiWrapper>
   );
 };
 

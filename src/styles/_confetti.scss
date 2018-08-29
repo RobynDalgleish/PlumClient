@@ -1,0 +1,22 @@
+
+.conf-wrapper {
+  position: relative;
+  overflow: hidden;
+
+
+  .red {
+    background-color: #F16522;
+  }
+
+  .yellow {
+    background-color: #FFC10E;
+  }
+
+  .blue {
+    background-color: #008DAF;
+  }
+}
+
+[class|="confetti"] {
+  position: absolute;
+}

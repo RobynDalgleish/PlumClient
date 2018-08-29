@@ -12,6 +12,17 @@
 
 .notificationsCard {
   padding: 20px 20px 15px 20px;
+  position: relative;
+  &:before {
+    content: '';
+    height: 14px;
+    width: 14px;
+    background-color: $radPink;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
 }
 
 .notificationsRequest {

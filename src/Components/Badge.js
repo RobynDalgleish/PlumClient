@@ -12,7 +12,7 @@ const Badge = ({ data = [], name = '', id}) => {
       <h3>{ name }</h3>
       <div>
         {
-          data.map((item, i) => {
+          data.filter((badge, i) => i < 4).map((item, i) => {
             return ( 
               <div className='badge' key={i}>
                 <img alt={item.badgeDescription} src={item.badgePhoto} />

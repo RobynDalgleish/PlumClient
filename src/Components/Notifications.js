@@ -1,10 +1,10 @@
 import React from 'react';
 import moment from 'moment';
 
-// function remove() {
-//     let x = document.getElementById('card'); 
-//     x.style.display = 'none';
-//   }
+function remove(i) {
+    let x = document.getElementById(i); 
+    x.style.display = 'none';
+  }
 
 const Notifications = ({ notifications }) => {
 
@@ -15,7 +15,7 @@ const Notifications = ({ notifications }) => {
   return(
     notifications.map((item, i) => {
       return(
-        <div className='card notificationsCard' id='card' key={i}>
+        <div className='card notificationsCard' id={i} key={i}>
           <div className='notificationsRequest'>
             <div>
               <img alt='' src={item.photo} />
@@ -27,7 +27,7 @@ const Notifications = ({ notifications }) => {
                   <p className='notificationsRequestText'><a>{ item.userName }</a> completed the <a>{ item.challengeName }</a> challenge</p>
                 </div>
                 <div>
-                  <button ><img className='x' alt='' src='/assets/images/x_icon.svg' /></button>
+                  <button onClick={ () => remove(i) }><img className='x' alt='' src='/assets/images/x_icon.svg' /></button>
                 </div>
               </div>
               <div className='details'>

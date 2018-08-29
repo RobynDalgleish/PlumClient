@@ -62,6 +62,9 @@
   font-family: 'basier_squareregular', sans-serif;
   color: $secondaryTextButton;
   font-size: 1.6rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .pts {

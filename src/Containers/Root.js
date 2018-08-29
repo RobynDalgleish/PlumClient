@@ -29,6 +29,14 @@ class Root extends Component {
       });
   };
 
+  // removeInvite(inviteName) {
+  //   this.setState({ profile: { ...this.state.profile, invites: this.state.profile.invites.filter(invite => invite.name !== inviteName) } })
+  // }
+
+  removeInvite(inviteName) {
+    this.setState({ profile: { ...this.state.profile, invites: this.state.profile.invites.filter(invite => invite.challengeName !== inviteName) } })
+   }
+
   render() {
 
     if (!this.state.profile) {
@@ -40,7 +48,7 @@ class Root extends Component {
         <Nav profile={ this.state.profile } />
         <Route exact path={`${this.props.match.url}/challenges`} render={(props) => <Challenges profile={ this.state.profile }/>}/>
         <Route exact path={`${this.props.match.url}/rewards`} render={(props) => <Rewards profile={ this.state.profile }/>}/>
-        <Route exact path={`${this.props.match.url}/activity`} render={(props) => <Activity profile={ this.state.profile }/>}/>
+        <Route exact path={`${this.props.match.url}/activity`} render={(props) => <Activity profile={ this.state.profile } removeInvite={(inviteName) => this.removeInvite(inviteName)} />}/>
         <Route exact path={`${this.props.match.url}/congrats`} render={(props) => <Congrats profile={ this.state.profile }/>}/>
         <Route exact path={this.props.match.url} render={(props) => <Profile profile={ this.state.profile }/>}/>
       </div>

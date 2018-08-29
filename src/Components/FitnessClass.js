@@ -1,5 +1,6 @@
 import React from 'react';
 import moment from 'moment';
+import { sortByDate } from '../utils';
 
 const today = moment('2018-09-03');
 // const tomorrow = moment().calendar(today, 'nextDay');
@@ -33,7 +34,8 @@ const FitnessClass = ({ data = [], name = '' }) => {
         <h2>{name}</h2>
         <div>
           {
-            data.map((item, i) => {
+          sortByDate(data, 'date')
+            .map((item, i) => {
               return ( 
                 <div className='card fitnessClassWrapper' key={i}>
                   <div className='cardPadding'>

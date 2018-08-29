@@ -7,6 +7,17 @@
 
 .invitesCard {
   padding: 20px 20px 15px 20px;
+  position: relative;
+  &:before {
+    content: '';
+    height: 14px;
+    width: 14px;
+    background-color: $radPink;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
 }
 
 .declineAccept {
@@ -33,16 +44,6 @@
 
 .invitesRequest {
   display: flex;
-    // &:before {
-    //   content: '';
-    //   height: 14px;
-    //   width: 14px;
-    //   background-color: $radPink;
-    //   border-radius: 50%;
-    //   position: relative;
-    //   top: -10px;
-    //   left: -10px;
-    // }
    img {
      height: 53px;
      width: 53px;

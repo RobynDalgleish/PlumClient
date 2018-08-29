@@ -18,7 +18,7 @@ class Activity extends Component {
             <Notifications notifications={this.props.profile.notifications}/>
           </TabPanel>
           <TabPanel>
-            <Invites invites={this.props.profile.invites}/>
+            <Invites invites={this.props.profile.invites} onRemove={this.props.removeInvite}/>
           </TabPanel>
         </Tabs>
       </div>

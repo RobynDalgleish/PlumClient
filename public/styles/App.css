@@ -198,7 +198,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
       letter-spacing: .1px;
       height: 60px;
       display: flex; }
-      .navWrapper ul li:hover, .navWrapper ul li:focus {
+      .navWrapper ul li:hover, .navWrapper ul li:focus, .navWrapper ul li:active {
         border-top: 2px solid transparent;
         border-bottom: 2px solid #FFFFFF; }
   .navWrapper a {
@@ -506,7 +506,10 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 .rewardDescription {
   font-family: 'basier_squareregular', sans-serif;
   color: #757575;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; }
 
 .pts {
   font-family: 'basier_squareregular', sans-serif;
@@ -559,7 +562,17 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
     padding: 20px; }
 
 .invitesCard {
-  padding: 20px 20px 15px 20px; }
+  padding: 20px 20px 15px 20px;
+  position: relative; }
+  .invitesCard:before {
+    content: '';
+    height: 14px;
+    width: 14px;
+    background-color: #FF575B;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 10px; }
 
 .declineAccept {
   display: flex;
@@ -622,7 +635,17 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
     background-color: transparent; }
 
 .notificationsCard {
-  padding: 20px 20px 15px 20px; }
+  padding: 20px 20px 15px 20px;
+  position: relative; }
+  .notificationsCard:before {
+    content: '';
+    height: 14px;
+    width: 14px;
+    background-color: #FF575B;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 10px; }
 
 .notificationsRequest {
   display: flex; }
@@ -658,6 +681,19 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   color: #757575;
   text-transform: uppercase;
   letter-spacing: .5px; }
+
+.conf-wrapper {
+  position: relative;
+  overflow: hidden; }
+  .conf-wrapper .red {
+    background-color: #F16522; }
+  .conf-wrapper .yellow {
+    background-color: #FFC10E; }
+  .conf-wrapper .blue {
+    background-color: #008DAF; }
+
+[class|="confetti"] {
+  position: absolute; }
 
 .button {
   height: 45px;
