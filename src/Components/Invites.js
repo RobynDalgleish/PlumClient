@@ -1,6 +1,6 @@
 import React from 'react';
 import moment from 'moment';
-
+import { sortByDate } from '../utils';
 
 const Invites = ({ invites, onRemove }) => {
 
@@ -8,18 +8,8 @@ const Invites = ({ invites, onRemove }) => {
     return null;
   }
 
-  // const sortedInvites = 
-
-  //   invites
-  //   // sort is not immutable, it modifies original array for filter(Boolean) gives me a new array
-  //   .filter(Boolean)
-  //   .sort((itemA, itemB) => itemA.date.isBefore(itemB.date) ? -1 : 1);
-
-  //   console.log('unsorted', invites);
-  //   console.log('sorted', sortedInvites);
-
   return(
-    invites.map((item, i) => {
+    sortByDate(invites, 'date').map((item, i) => {
       return(
         <div className='card invitesCard' id={item.challengeName} key={i}>
           <div className='invitesRequest'>
@@ -33,7 +23,7 @@ const Invites = ({ invites, onRemove }) => {
                 <p className='invitesDate'>{ moment(item.date).startOf("day").fromNow() }</p>
               </div>
               <div>
-                <button onClick={ () => onRemove(item.challengeName) }><img className='x' alt='' src='/assets/images/x_icon.svg' /></button>
+                <button onClick={ () => onRemove(item.userName) }><img className='x' alt='' src='/assets/images/x_icon.svg' /></button>
               </div>
             </div>
           </div>

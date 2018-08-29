@@ -1,19 +1,15 @@
 import React from 'react';
 import moment from 'moment';
+import { sortByDate } from '../utils';
 
-function remove(i) {
-    let x = document.getElementById(i); 
-    x.style.display = 'none';
-  }
-
-const Notifications = ({ notifications }) => {
+const Notifications = ({ notifications, onRemoval }) => {
 
   if (!notifications.length && !notifications.length) {
     return null;
   }
 
   return(
-    notifications.map((item, i) => {
+    sortByDate(notifications, 'date').map((item, i) => {
       return(
         <div className='card notificationsCard' id={i} key={i}>
           <div className='notificationsRequest'>
@@ -27,7 +23,7 @@ const Notifications = ({ notifications }) => {
                   <p className='notificationsRequestText'><a>{ item.userName }</a> completed the <a>{ item.challengeName }</a> challenge</p>
                 </div>
                 <div>
-                  <button onClick={ () => remove(i) }><img className='x' alt='' src='/assets/images/x_icon.svg' /></button>
+                  <button onClick={ () => onRemoval(item.userName) }><img className='x' alt='' src='/assets/images/x_icon.svg' /></button>
                 </div>
               </div>
               <div className='details'>

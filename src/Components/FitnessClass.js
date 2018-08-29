@@ -34,8 +34,7 @@ const FitnessClass = ({ data = [], name = '' }) => {
         <h2>{name}</h2>
         <div>
           {
-          sortByDate(data, 'date')
-            .map((item, i) => {
+            sortByDate(data, 'date', true).map((item, i) => {
               return ( 
                 <div className='card fitnessClassWrapper' key={i}>
                   <div className='cardPadding'>
