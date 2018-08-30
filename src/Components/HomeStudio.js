@@ -11,7 +11,7 @@ const HomeStudio = ({ data }) => {
     <div>
         <div className='homeStudio cardPadding'>
           <h3>{data.name}</h3>
-          <Link to='/challenges'> 
+          <Link to={'/profiles/' + data.id + '/challenges/'}>
             <img className='chevron' alt='' src='/assets/images/chevron.svg' />
           </Link>
         </div> 
