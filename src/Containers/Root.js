@@ -52,7 +52,7 @@ class Root extends Component {
         <Route exact path={`${this.props.match.url}/activity`} render={(props) => <Activity profile={ this.state.profile } removeInvite={(name) => this.removeInvite(name)} removeNotification={(name) => this.removeNotification(name)}/>}/>
         <Route exact path={`${this.props.match.url}/congrats`} render={(props) => <Congrats profile={ this.state.profile }/>}/>
         <Route exact path={this.props.match.url} render={(props) => <Profile profile={ this.state.profile }/>}/>
-        <Route exact path={this.props.match.url} render={(props) => <Landing profile={ this.state.profile }/>}/>
+        <Route exact path={`${this.props.match.url}/ `}render={(props) => <Landing profile={ this.state.profile }/>}/>
       </div>
     )
   }

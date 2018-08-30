@@ -326,7 +326,9 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
     color: #FF575B; }
 
 .challengesWrapper h1 {
-  font-size: 3.4rem;
+  font-family: 'basier_squaresemibold', sans-serif;
+  padding-top: 10px;
+  font-size: 3.2rem;
   color: #FFFFFF; }
 
 .congratsCard {
@@ -728,7 +730,8 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
     display: flex;
     justify-content: space-between;
     font-size: 1.8rem;
-    width: 80%; }
+    width: 80%;
+    font-family: 'basier_squaremedium', sans-serif; }
     .plumContainer .plumCta a:first-child {
       color: #575757;
       text-decoration: underline; }
