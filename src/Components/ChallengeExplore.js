@@ -4,18 +4,6 @@ import { sortByDate } from '../utils';
 
 
 const ChallengeExplore = ({ rewards }) => {
-  <div>
-  <header>
-  <h1 className='userName'>Rewards</h1>
-  </header>
-<section className='mainInfo'>
-  <div className='card'>
-    <HomeStudio data={this.props.profile.homeStudio} />
-    <Status level={this.props.profile.level} levelsList={this.props.profile.levelsList} points={this.props.profile.points} />
-  </div>
-</section>
-
-  </div>
 
   if (!rewards.length && !rewards.length) {
     return null;

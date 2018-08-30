@@ -325,6 +325,10 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
     font-family: 'basier_squaremedium', sans-serif;
     color: #FF575B; }
 
+.challengesWrapper h1 {
+  font-size: 3.4rem;
+  color: #FFFFFF; }
+
 .congratsCard {
   background-image: url("/assets/images/confettiSmall.svg");
   background-repeat: no-repeat;
