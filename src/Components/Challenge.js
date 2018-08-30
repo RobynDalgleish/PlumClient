@@ -30,7 +30,9 @@ const Challenge = ({ challenges = [], name = '' , id }) => {
                   <div className='card'>
                     <div className='cardPadding challengeNameAndDetails'>
                       <h3>{ item.name }</h3>
-                      <Link to='/challenges'>Details</Link>
+                      <Link to={`/profiles/${id}/challenges/`}> 
+                        Details
+                      </Link>
                     </div>
                     <div className='cardPadding challengePercentAndPts'>
                       <p>{ Math.floor(item.userPoints / item.pointsValue * 100) }%</p>
