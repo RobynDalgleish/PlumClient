@@ -7,6 +7,7 @@ import Activity from './Activity';
 import Profile from './Profile';
 import Congrats from '../Components/Congrats';
 import Nav from '../Components/Nav'
+import Landing from './Landing';
 
 class Root extends Component {
 
@@ -16,8 +17,8 @@ class Root extends Component {
 
   componentWillMount() {
     // match is an object on the React Router object
-    // axios.get(`http://server.internproject.hugetointernal.hugeops.com/api/profiles/${this.props.match.params.id}`)
-    axios.get(`http://localhost:8080/api/profiles/${this.props.match.params.id}`)
+    axios.get(`http://server.internproject.hugetointernal.hugeops.com/api/profiles/${this.props.match.params.id}`)
+    // axios.get(`http://localhost:8080/api/profiles/${this.props.match.params.id}`)
       .then(({ data }) => {
         this.setState({
           profile: data
@@ -51,6 +52,7 @@ class Root extends Component {
         <Route exact path={`${this.props.match.url}/activity`} render={(props) => <Activity profile={ this.state.profile } removeInvite={(name) => this.removeInvite(name)} removeNotification={(name) => this.removeNotification(name)}/>}/>
         <Route exact path={`${this.props.match.url}/congrats`} render={(props) => <Congrats profile={ this.state.profile }/>}/>
         <Route exact path={this.props.match.url} render={(props) => <Profile profile={ this.state.profile }/>}/>
+        <Route exact path={this.props.match.url} render={(props) => <Landing profile={ this.state.profile }/>}/>
       </div>
     )
   }

@@ -1,4 +1,18 @@
 
+.challengesWrapper {
+  padding: 15px;
+}
+
+.alignRight {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.6rem;
+    a {
+      font-family: 'basier_squaremedium', sans-serif;
+      color: $radPink;
+    }
+}
+
 .congratsCard {
   background-image: url('/assets/images/confettiSmall.svg');
   background-repeat: no-repeat;
