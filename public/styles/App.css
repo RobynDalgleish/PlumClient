@@ -712,44 +712,53 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 [class|="confetti"] {
   position: absolute; }
 
-.plum {
+.plumWhoo {
   height: 225px;
   width: 98px; }
 
 .plumContainer {
+  padding-top: 30px;
+  font-size: 44px;
+  width: 80%;
+  text-align: left; }
+  .plumContainer::before {
+    content: '';
+    width: 40px;
+    height: 1px;
+    border-bottom: 3px solid #FF575B;
+    position: absolute;
+    top: 90px; }
+  .plumContainer img {
+    width: 100px; }
+
+.plumWhooContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 100vh; }
-  .plumContainer > div {
+  .plumWhooContainer .sc-bdVaJa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .plumWhooContainer > div {
     position: relative;
     width: 80%; }
-  .plumContainer .plumCta {
+  .plumWhooContainer .plumCta {
     display: flex;
     justify-content: space-between;
     font-size: 1.8rem;
     width: 80%;
     font-family: 'basier_squaremedium', sans-serif; }
-    .plumContainer .plumCta a:first-child {
+    .plumWhooContainer .plumCta a:first-child {
       color: #575757;
       text-decoration: underline; }
-    .plumContainer .plumCta a:last-child {
-      color: #FF575B; }
-  .plumContainer h1 {
-    padding-top: 30px;
-    font-size: 44px;
-    width: 80%;
-    text-align: left; }
-    .plumContainer h1::before {
-      content: '';
-      width: 40px;
-      height: 1px;
-      border-bottom: 3px solid #FF575B;
-      position: absolute;
-      top: 90px; }
-  .plumContainer h2 {
+    .plumWhooContainer .plumCta a:last-child {
+      color: #FF575B;
+      text-decoration: none; }
+  .plumWhooContainer h2 {
     width: 80%;
     padding: 30px 30px 50px 0;
     font-size: 2.2rem; }
